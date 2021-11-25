@@ -316,8 +316,14 @@ select {
   list-style: none;
   padding: 0;
   margin: 0;
-  background: hsl( var(--clr-white) / .1 );
-  backdrop-filter: blur(1.5rem);
+  background: hsl( var(--clr-dark) / .9 );
+}
+
+@supports(backdrop-filter: blur(1.5rem)) {
+  .primary-navigation {
+    background: hsl( var(--clr-white) / .1 );
+    backdrop-filter: blur(1.5rem);
+  }
 }
 
 .primary-navigation a {
@@ -329,13 +335,6 @@ select {
   font-weight: 700;
   margin-right: .5em;
 }
-
-/* @supports(backdrop-filter: blur(1.5rem)) {
-  .primary-navigation {
-    background: hsl( var(--clr-white) / .1 );
-    backdrop-filter: blur(1.5rem);
-  }
-} */
 
 .mobile-nav-toggle {
   display: none;   
